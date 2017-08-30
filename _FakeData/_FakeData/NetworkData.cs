@@ -10,8 +10,9 @@ namespace _FakeData
     {
         private static Random _rnd;
         private static List<string> _maleMailAddresses = new List<string>();
+        private static List<string> _femaleMailAddresses = new List<string>();
 
-        private static List<string> PrepareEmail(string domen)
+        private static List<string> PrepareEmailForMale(string domen)
         {
             for (int i = 0; i < 20; i++)
             {
@@ -23,6 +24,19 @@ namespace _FakeData
             
         }
 
+        private static List<string> PrepareEmailForFemale(string domen)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                string mail = NameData.GetFemaleFirstName() + "." + NameData.GetFemaleSurname() + "@" + domen;
+                _maleMailAddresses.Add(mail);
+            }
+
+            return _maleMailAddresses;
+
+        }
+
+
         private static string Get(List<string> list)
         {
             _rnd = new Random();
@@ -32,7 +46,12 @@ namespace _FakeData
 
         public static string GetMaleMailAddress(string domen)
         {
-            return Get(PrepareEmail(domen));
+            return Get(PrepareEmailForMale(domen));
+        }
+
+        public static string GetFemaleMailAddress(string domen)
+        {
+            return Get(PrepareEmailForFemale(domen));
         }
     }
 }

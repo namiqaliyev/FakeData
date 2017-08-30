@@ -11,7 +11,7 @@ namespace _TestData
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(NetworkData.GetMaleMailAddress("box.az"));
+            Console.WriteLine(NetworkData.GetFemaleMailAddress("box.az"));
             Console.ReadLine();
         }
     }
