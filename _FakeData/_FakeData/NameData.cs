@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _FakeData
 {
-    public class NameData
+    public static class NameData
     {
-        private static Random _rnd;
+        private static Random _rnd=new Random();
 
         private static List<string> _firstMaleNames = new List<string>()
             {
@@ -62,7 +62,6 @@ namespace _FakeData
 
         private static string Get(List<string> list)
         {
-            _rnd = new Random();
             int number = _rnd.Next(list.Count - 1);
             return list[number];
         }

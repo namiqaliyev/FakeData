@@ -8,7 +8,7 @@ namespace _FakeData
 {
     public static class NetworkData
     {
-        private static Random _rnd;
+        private static Random _rnd=new Random();
         private static List<string> _maleMailAddresses = new List<string>();
         private static List<string> _femaleMailAddresses = new List<string>();
 
@@ -39,7 +39,6 @@ namespace _FakeData
 
         private static string Get(List<string> list)
         {
-            _rnd = new Random();
             int number = _rnd.Next(list.Count - 1);
             return list[number];
         }
