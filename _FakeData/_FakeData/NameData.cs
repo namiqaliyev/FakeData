@@ -22,7 +22,7 @@ namespace _FakeData
             };
         private static List<string> _firstFemaleNames = new List<string>()
         {
-                 "Türkanə","Arzu","Nigar",
+                 "Zərifə","Arzu","Nigar",
                  "Şəhla","Günel","Aysel",
                  "Aynur","Nuranə","Günay",
                  "Səbinə","Nuray","Elnurə",
